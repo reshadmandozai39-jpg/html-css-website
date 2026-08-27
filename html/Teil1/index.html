@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Beschreibungstext" />
+		<meta name="keywords" content="Stichwörter" />
+		<link rel="shortcut icon" href="favicon.icon" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Webspace Reshad Mandozai</title>
+	</head>
+
+	<body>
+		<header id="top">
+			<h1>Meine Webseite HTML und CSS</h1>
+			<p>Herzlich Willkommen auf meiner ersten HTML-Übungsseite.</p>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="#ueber-mich">Über mich</a></li>
+				<li><a href="#bilder">Bilder</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+
+		<section>
+			<article id="ueber-mich" class="content-block">
+				<h2>Über mich</h2>
+				<p>Ich möchte eine kleine Website mit HTML und CSS programmieren.</p>
+
+				<h3>Meine Hobbys</h3>
+				<p>Ich spiele gerne Ping Pong und gehe schwimmen.</p>
+
+				<h4>Kleinere Zwischenüberschrift</h4>
+				<p>Noch ein Absatz mit etwas mehr Text, damit die Seite gefüllt ist.</p>
+
+				<h3>Meine Hobbys (unsortierte Liste)</h3>
+				<ul>
+					<li>Programmieren</li>
+					<li>Sport</li>
+					<li>Lesen</li>
+				</ul>
+
+				<h3>Meine Tagesroutine (sortierte Liste)</h3>
+				<ol>
+					<li>Aufstehen</li>
+					<li>Frühstücken</li>
+					<li>Zur Schule gehen</li>
+					<li>Mittagessen</li>
+					<li>Zum Sport gehen</li>
+				</ol>
+
+				<h3>Stundenplan (Tabelle)</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Tag</th>
+							<th>Fach</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Montag</td>
+							<td>Informatik</td>
+						</tr>
+						<tr>
+							<td>Dienstag</td>
+							<td>Deutsch</td>
+						</tr>
+						<tr>
+							<td>Mittwoch</td>
+							<td>Französisch</td>
+						</tr>
+						<tr>
+							<td>Donnerstag</td>
+							<td>Mathematik</td>
+						</tr>
+						<tr>
+							<td>Freitag</td>
+							<td>English</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+
+			<article id="bilder" class="content-block">
+				<h2>Bilder</h2>
+				<img src="src/logo1.jpeg" alt="Bild 1" width="300" height="200" />
+				<img src="src/logo2.jpg" alt="Bild 2" width="300" height="200" />
+				<img src="src/logo3.jpeg" alt="Bild 3" width="300" height="200" />
+
+				<h3>Video</h3>
+				<video width="320" height="240" controls>
+					<source src="src/movie.mp4" type="video/mp4" />
+					<source src="src/movie2.ogg" type="video/ogg" />
+					Ihr Browser unterstützt das Video-Tag nicht.
+				</video>
+			</article>
+
+			<article class="content-block">
+				<h2>Links</h2>
+				<p>Hier ein paar externe Links:</p>
+				<ul>
+					<li>
+						<a href="https://www.google.com" target="_blank" rel="noopener"
+							>Google</a
+						>
+					</li>
+					<li>
+						<a href="https://www.gibb.ch" target="_blank" rel="noopener"
+							>GIBB</a
+						>
+					</li>
+				</ul>
+			</article>
+
+			<article class="content-block">
+				<h2>Navigation</h2>
+				<button type="button" onclick="scrollToTop()">
+					↑ Nach oben scrollen
+				</button>
+				<button type="button" class="secondary" onclick="scrollToBottom()">
+					↓ Nach unten scrollen
+				</button>
+			</article>
+
+			<article id="kontakt" class="content-block">
+				<h2>Kontaktformular</h2>
+				<form id="kontaktForm" action="#" method="get">
+					<p>
+						<label for="name">Name:</label><br />
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Dein Name"
+							required />
+					</p>
+
+					<p>
+						<label for="age">Alter:</label><br />
+						<input
+							type="number"
+							id="age"
+							name="age"
+							min="1"
+							max="120"
+							placeholder="z. B. 18"
+							required />
+					</p>
+
+					<p>
+						<label for="email">E-Mail:</label><br />
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="name@beispiel.ch"
+							required />
+					</p>
+
+					<p>
+						<label for="color">Lieblingsfarbe auswählen:</label><br />
+						<input
+							type="color"
+							id="color"
+							name="color"
+							value="#ff0000"
+							oninput="colorValue.textContent = this.value" />
+						<span id="colorValue">#ff0000</span>
+					</p>
+
+					<p>
+						<label for="nachricht">Nachricht:</label><br />
+						<textarea
+							id="nachricht"
+							name="nachricht"
+							rows="4"
+							cols="30"
+							placeholder="Deine Nachricht an mich..."
+							required></textarea>
+					</p>
+
+					<button type="submit">Nachricht absenden</button>
+					<button type="reset" class="secondary">Zurücksetzen</button>
+				</form>
+			</article>
+
+			<aside>
+				<h3>Wusstest du schon?</h3>
+				<p>
+					Diese Website habe ich nur als Beispiel programmiert. Das ist keine
+					echte Website, sondern einfach eine Website mit HTML und CSS.
+				</p>
+			</aside>
+		</section>
+
+		<footer>
+			<p>&copy; 2026 Meine Webseite. Alle Rechte vorbehalten.</p>
+		</footer>
+
+		<script>
+			function scrollToTop() {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
+
+			function scrollToBottom() {
+				window.scrollTo({
+					top: document.body.scrollHeight,
+					behavior: 'smooth',
+				});
+			}
+
+			const form = document.getElementById('kontaktForm');
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				const formData = {
+					name: document.getElementById('name').value,
+					age: document.getElementById('age').value,
+					email: document.getElementById('email').value,
+					color: document.getElementById('color').value,
+					nachricht: document.getElementById('nachricht').value,
+					datum: new Date().toLocaleString(),
+				};
+
+				localStorage.setItem('formularDaten', JSON.stringify(formData));
+
+				alert('Daten wurden erfolgreich im Browser gespeichert!');
+			});
+		</script>
+	</body>
+</html>
